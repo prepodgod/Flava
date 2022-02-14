@@ -1,0 +1,20 @@
+include ../mixins/bem
+-const social = [{link: 'https://www.instagram.com/', source: '../static/img/instagram.svg'},{link: 'https://www.youtube.com/', source: '../static/img/youtube.svg'},{link: 'https://open.spotify.com/',source: '../static/img/music.svg'}];
+
+block feedback
++b.SECTION.feedback.container
+    +e.wrap
+        +e.P.social Phone
+        +e.A.link(href="tel:+628122345678") +62 812 2345 678
+        +e.P.social Email
+        +e.A.link(href="mailto: someone@example.com") Flavamusicfest@mail.com
+    +b.social
+        +e.P.touch Keep In Touch
+            +e.FORM.wrap.js-form-ajax
+                +e.INPUT.input.input(name='email' type='email' data-rule="required|email" placeholder='Your Email')
+                +e.INPUT.submit.submit(type='submit' value='Subscribe')
+        +e.UL.list
+            each soc in social 
+                +e.item
+                    +e.link(href=soc.link)
+                        +e.icon(src=soc.source)

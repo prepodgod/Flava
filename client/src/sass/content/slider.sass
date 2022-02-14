@@ -1,0 +1,46 @@
+.control
+  background: rgba(255, 255, 255, 0.05)
+  width: rem(25)
+  height: rem(25)
+  display: flex
+  @media screen and ( min-width: 48rem)
+    display: flex
+    align-items: center
+    justify-content: center
+  @media screen and ( min-width: 62rem)
+    width: rem(35)
+  @media screen and ( min-width: 75rem)
+    cursor: pointer
+    transition: 0.5
+    &:hover
+      opacity: 0.5
+      transition: 0.5
+  &__
+    &img
+      display: block
+  &--
+    &next
+      transform: rotate(180deg)
+      right: 0
+      margin-left: rem(10)
+    &prev
+      right: 0
+
+.slick-dots
+  margin-top: rem(20)
+  display: flex
+  align-items: center
+  justify-content: center
+  button
+    font-size: 0
+    width: 11px
+    height: 11px
+    border-radius: 50%
+    background-color: rgba(255, 255, 255, 0.1)
+    margin-right: 4px
+    &:hover
+      @media screen and ( min-width: 75rem)
+        background-color: rgba( 254,186,8, 0.5)
+  li.slick-active
+    button
+      background-color: var( --theme--color-primary)

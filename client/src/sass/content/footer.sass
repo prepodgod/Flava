@@ -1,0 +1,31 @@
+.footer
+  background-color: var( --theme--color-primary)
+  margin-top: rem(40)
+  padding: rem(15) 0 rem(20)
+  &__
+    &terms
+      +secondary-family-medium
+      font-size: var(--font--size-xsm)
+      color: var(--text--color-secondary)
+      max-width: rem(291)
+      text-align: center
+      text-decoration: none
+      @media screen and ( min-width: 48rem)
+        max-width: fit-content
+    &wrap
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      @media screen and ( min-width: 48rem)
+        align-items: baseline
+        flex-direction: row-reverse
+        justify-content: space-between
+
+    &copyright
+      +secondary-family-medium
+      margin-top: rem(15)
+      text-decoration: none
+      font-size: var(--font--size-xsm)
+      text-align: center
+      color: var(--text--color-primary)

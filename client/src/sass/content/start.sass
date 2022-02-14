@@ -1,0 +1,46 @@
+.start
+  margin-top: percentage(40,411)
+  @media screen and ( min-width: 48rem)
+    margin-top: rem(40)
+  &__
+    &timer
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      justify-items: center
+      grid-row-gap: rem(40)
+      margin-top: rem(40)
+      @media screen and ( min-width: 62rem)
+        grid-template-columns: repeat(4,9.375rem)
+        justify-content: center
+        grid-column-gap: 2rem
+    &block
+      color: var(--text--color-primary)
+    &text
+      font-size: var(--font--size-sm)
+      text-align: center
+      +secondary-family-medium
+    &number
+      +main-family-bold
+      font-size: var(--font--size-xxl)
+    &title
+      text-align: center
+      @media screen and ( min-width: 62rem)
+        font-size: var(--font--size-lg)
+    &btn
+      +secondary-family-medium
+      font-size: var(--font--size-sm)
+      color: var(--text--color-secondary)
+      padding: rem(15) rem(26)
+      background: var( --theme--color-primary)
+      margin: 12.16545% auto 0
+      display: block
+      border: 1px solid transparent
+      transition: 1s
+      @media screen and ( min-width: 62rem)
+        margin-top: rem(40)
+      @media screen and ( min-width: 75rem)
+        &:hover
+          background: transparent
+          color: var(--theme--color-primary)
+          border: 1px solid var(--theme--color-primary)
+          transition: 1s

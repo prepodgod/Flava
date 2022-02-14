@@ -1,0 +1,14 @@
+include ../mixins/bem
+- const lineup = [{path: '../static/img/rafaella_mob.jpg', name: 'rafaella'}, {path: '../static/img/bana_mob.jpg', name: 'atikh bana'}, {path: '../static/img/rayul_mob.jpg', name: 'rayul'},{path: '../static/img/bana_mob.jpg', name: 'atikh bana'}]
+
+block lineups
++b.SECTION.lineups.container#lineup
+  +e.text
+    +e.P.title.title the lineup of flafa
+  +e.wrapper
+    +e.wrap.js--slider-lineup
+      each line in lineup
+        +e.picture
+          +e.IMG(src=line.path).img
+          +e.P.name= line.name 
+    +e.arrows 

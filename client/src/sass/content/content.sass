@@ -1,0 +1,42 @@
+.content
+  max-width: rem(354)
+  position: relative
+  @media screen and ( min-width: 75rem)
+    max-width: fit-content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: rem(62)
+  &__
+    &message
+      max-width: rem(354)
+      position: relative
+      @media screen and ( min-width: 75rem)
+        max-width: fit-content
+    &fill
+      margin-top: rem(27)
+      position: relative
+      max-width: 22.125rem
+      @media screen and ( min-width: 75rem)
+        width: 50%
+        max-width: max-content
+        margin-top: 0
+    &text
+      margin-top: 1.2rem
+      height: rem(341)
+      width: rem(354)
+      box-sizing: border-box
+      text-align: top
+      +secondary-family-regular
+      font-size: var(--font--size-xxsm)
+      padding: 1rem 0.3125rem 0.3125rem
+      @media screen and ( min-width: 75rem)
+        height: rem(279)
+        font-size: var(--font--size-sm)
+        margin-top: 0
+        width: rem(546)
+    &submit
+      position: absolute
+      padding: 0.9375em 2.1875em
+      bottom: 0
+      right: 0

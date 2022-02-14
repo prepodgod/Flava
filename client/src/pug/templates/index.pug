@@ -1,0 +1,38 @@
+include ../mixins/bem
+<!DOCTYPE html>
+html(lang='ru')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="theme-color" content="#8F67A4")
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+  link(
+    rel="stylesheet",
+    type="text/css",
+    media="all",
+    href='../static/css/style.css'
+  )
+  title Flava
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  body
+    #app
+      block header
+        include header
+
+      block content
+      main.main
+        block timer
+          include timer 
+        block lineups
+          include lineups
+        block sponsors
+          include sponsors
+        block gift
+          include gift
+        block feedback
+          include feedback
+      block footer
+        include footer
+
+    script(type="text/javascript" src='../static/js/main.js')

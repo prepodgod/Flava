@@ -1,0 +1,20 @@
+include ../mixins/bem
+
+block timer
++b.SECTION.start.container#counter
+  +e.P.title.title Music festival start in
+  +e.timer#timer
+    +e.block
+      +e.SPAN.number#days 98 
+      +e.P.text days
+    +e.block
+      +e.SPAN.number#hours 11 
+      +e.P.text hours
+    +e.block
+      +e.SPAN.number#minutes 05 
+      +e.P.text minutes
+    +e.block
+      +e.SPAN.number#seconds 01 
+      +e.P.text seconds
+
+  +e.BUTTON.btn BUY TICKET

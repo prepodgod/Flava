@@ -1,0 +1,68 @@
+
+.lineups
+  &__
+    &text
+      margin-top: percentage(40,411)
+
+    &wrapper
+      margin-top: rem(30)
+      position: relative
+
+    &wrap
+      display: flex
+      justify-content: center
+
+    &picture
+      position: relative
+      max-width: rem(272)
+      padding-left: 14%
+      @media screen and ( min-width: 36rem)
+        padding-left: 25%
+      @media screen and ( min-width: 48rem)
+        padding-left: 10%
+      @media screen and ( min-width: 75rem)
+        max-width: rem(371)
+        height: rem(344)
+        padding-left: 0
+        cursor: pointer
+    &img
+      margin: 0 auto
+      width: 100%
+      display: block
+      object-fit: cover
+
+    &name
+      height: 18.02326%
+      position: absolute
+      width: rem(272)
+      text-transform: uppercase
+      background: rgba(18, 18, 18, 0.8)
+      bottom: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      font-family: var(--font--family-primary)
+      font-weight: bold
+      font-size: var(--font--size-md)
+      color: var(--text--color-accessory)
+      @media screen and ( min-width: 75rem)
+        width: rem(371)
+        bottom: -3px
+        transition: 1s
+    &arrows
+      display: flex
+      position: absolute
+      right: 0
+      margin-top: rem(30)
+      transform: translateX(-15%)
+      @media screen and ( min-width: 48rem)
+        transform: translateX(-89%)
+      @media screen and ( min-width: 75rem)
+        top: -5.063rem
+        right: rem(-56)
+
+.lineups__picture:hover .lineups__name
+  @media screen and ( min-width: 75rem)
+    transition: 1s
+    height: 101%
+    font-size: var(--font--size-xl)

@@ -1,0 +1,35 @@
+\:root
+  --text--color-primary: #FFFFFF
+  --text--color-secondary: #121212
+  --text--color-accessory: #FEBA08
+  --theme--color-primary: #FEBA08
+  --background--color-primary: #121212
+  --background--color-secondary: #ffffff
+  --font--family-primary: Poopins
+  --font--family-secondary: Roboto
+  --mq--size-sm: 33.75rem
+  --mq--size-md: 45rem
+  --mq--size-lg: 60rem
+  --mq--size-xl: 71.25rem
+  --mq--size-xxl: 85.375rem
+  --font--size-xxsm: 0.813rem
+  --font--size-xsm: 0.875rem
+  --font--size-sm: 1.125rem
+  --font--size-md: 1.5rem
+  --font--size-lg: 2.25rem
+  --font--size-xl: 3rem
+  --font--size-xxl: 4.5rem
+body
+  background-color: var(--background--color-primary)
+.container
+  margin: 0 auto
+  max-width: 100%
+  padding: 0% 7%
+  @media screen and ( min-width: 36rem)
+    +mq-size-sm
+  @media screen and ( min-width: 48rem)
+    +mq-size-md
+  @media screen and ( min-width: 62rem)
+    +mq-size-lg
+  @media screen and ( min-width: 75rem)
+    +mq-size-xl

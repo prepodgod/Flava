@@ -1,0 +1,32 @@
+include ../mixins/bem
+-const values =[{name: 'Home',link: '#header'},{name: 'LINE UP',link: '#lineup'},{name: 'TICKET',link: '#sponsors'},{name: 'SCHEDULE',link: '#timer'},{name: 'BE PART OF',link: '#footer'},{name: 'ABOUT',link: '#lineup'},]
+
+
+
+block header
++b.HEADER.header#header
+  +e.VIDEO.video(src="../static/img/video.mp4" type='video/mp4' muted loop autoplay).js-video
+  +e.inner.js-header__inner
+    .container
+      +e.wrap
+        +b.logo
+          +e.img(src="../static/img/Flava.svg")
+        +b.NAV.menu.js-menu
+          +e.UL.list
+            each val in values
+              +e.item
+                +e.link(href=val.link)= val.name
+            +e.BUTTON.btn Create account
+        +b.burger.js-burger
+          +e.SPAN.stick
+          +e.SPAN.stick.--sm
+          +e.SPAN.stick
+          +e.SPAN.stick--sm
+  +b.music.container
+    +e.H1.title ALL ABOUT MUSIC - ITS ALL HERE
+    +e.H2.epigraph Turn on the feeling with all music event 
+    +e.BUTTON.play.js-button
+      +e.img(src="../static/img/arrow.svg")
+
+
+

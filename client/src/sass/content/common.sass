@@ -1,0 +1,47 @@
+.title
+  color: var(--text--color-accessory)
+  +main-family-bold
+  font-size: var(--font--size-md)
+  text-align: center
+  text-transform: uppercase
+  @media screen and ( min-width: 48rem)
+    font-size: var(--font--size-lg)
+
+.input
+  +secondary-family-regular
+  width: rem(340)
+  padding: rem(5)
+  height: rem(51)
+  font-size: var(--font--size-xxsm)
+  @media screen and ( min-width: 75rem)
+    width: 90%
+  &:focus
+    &::placeholder
+      opacity: 0
+  @media screen and ( min-width: 75rem)
+    font-size: var(--font--size-sm)
+    outline: none
+    &:hover
+      outline: 2px solid var(--theme--color-primary)
+    &:focus
+      outline: 2px solid var(--theme--color-primary)
+  &::placeholder
+    color: var(--text--color-secondary)
+  &:not(&:first-child)
+    margin-top: 1.2rem
+    @media screen and ( min-width: 75rem)
+      margin-top: 2.625rem
+
+.submit
+  background: var(--theme--color-primary)
+  border: none
+  +secondary-family-medium
+  font-size: var(--font--size-sm)
+  color: var(--text--color-secondary)
+  border: 1px solid transparent
+  transition: 1s
+  @media screen and ( min-width: 75rem)
+    &:hover
+      background-color: transparent
+      border: 1px solid var(--theme--color-primary)
+      transition: 1s

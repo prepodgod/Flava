@@ -1,0 +1,12 @@
+include ../mixins/bem
+-const sponsors = ['../static/img/vstudio.jpg','../static/img/pizzahot.jpg','../static/img/trainsia.jpg','../static/img/firevent.jpg','../static/img/baberock.jpg','../static/img/crocodie.jpg','../static/img/pizzahot.jpg']
+
+block sposnors
++b.SECTION.sponsors.container#sponsors
+    +e.text 
+        +e.P.title.title SPONSORS
+    +e.wrapper.js--slider-sponsors
+        each spons in sponsors
+            +e.picture
+                +e.A(href="#")
+                    +e.img(src=spons)

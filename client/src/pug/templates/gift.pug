@@ -1,0 +1,13 @@
+include ../mixins/bem
+block gift 
++b.SECTION.gift.container
+  +e.P.title.title first come, first served
+  +e.P.desc 1,000 people who leave a request will receive a gift from FLAVA
+  +b.FORM.content(data-action="https://httpbin.org/post" data-method='POST' class='js-form-ajax')
+    +e.fill
+      +e.INPUT.name.input(name='name' type='text' data-rule="required|name" placeholder='Your name')
+      +e.INPUT.email.input(name='email' type='email' data-rule="required|email" placeholder='Your Email')
+      +e.INPUT.phone.input(name='phone' type='text' data-rule="required|phone" placeholder='Your phone')
+    +e.message
+      +e.TEXTAREA.text.input(name='textarea' placeholder='Your message')
+      +e.INPUT.submit.submit(name='submit' type='submit' value='Send') 

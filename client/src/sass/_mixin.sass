@@ -1,0 +1,59 @@
+@use "sass:math"
+
+$index-font-size: 16px
+
+@mixin mq-size-sm
+    max-width: var(--mq--size-sm)
+    margin: 0 auto
+    padding: 0 1%
+
+@mixin mq-size-md
+    max-width: var(--mq--size-md)
+    margin: 0 auto
+
+@mixin mq-size-lg
+    max-width: var(--mq--size-lg)
+    margin: 0 auto
+
+@mixin mq-size-xl
+    max-width: var(--mq--size-xl)
+    margin: 0 auto
+
+
+@mixin main-family-bold
+    font-family: var(--font--family-primary)
+    font-weight: bold
+
+
+@mixin main-family-medium
+    font-family: var(--font--family-primary)
+    font-weight: 500
+
+@mixin secondary-family-medium
+    font-family: var(--font--family-secondary)
+    font-style: normal
+    font-weight: 500
+
+@mixin secondary-family-regular
+    font-family: var(--font--family-secondary)
+
+
+@mixin main-family-regular
+    font-family: var(--font--family-primary)
+    font-weight: 400
+
+@mixin yandex-medium
+    font-family: var(--font--family-secondary)
+    font-weight: 500
+
+@mixin button
+    background: var(  --theme--color-primary)
+    border-radius: rem(8)
+    font-size: rem(13)
+    color: var(--text--color-primary)
+
+@function rem($px)
+    @return ($px*1px/$index-font-size)*1rem
+
+@function percentage($firstpx, $secondpx)
+    @return $firstpx/$secondpx *100%

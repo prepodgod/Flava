@@ -1,0 +1,57 @@
+.music
+  position: absolute
+  top: 48%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: flex
+  gap: rem(10)
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &__
+    &title
+      min-width: 21.5rem
+      +main-family-bold
+      font-size: var(--font--size-lg)
+      color: var(--text--color-primary)
+      line-height: 133.69%
+      text-align: center
+      @media screen and ( min-width: 48rem)
+        font-size: var(--font--size-xl)
+        min-width: 47.5rem
+      @media screen and ( min-width: 62rem)
+        min-width: 56.5rem
+    &epigraph
+      color: var(--text--color-primary)
+      +main-family-medium
+      font-size: var(--font--size-fsm)
+      line-height: 133.69%
+      text-align: center
+      @media screen and ( min-width: 48rem)
+        font-size: var(--font--size-md)
+    &play
+      margin-top: percentage(50,328)
+      display: flex
+      position: relative
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      background: var(--background--color-secondary)
+      height: rem(78)
+      width: rem(78)
+
+      @media screen and ( min-width: 48rem)
+        margin-top: rem(50)
+      @media screen and ( min-width: 75rem)
+        transition: 1s
+        &:hover
+          opacity: 0.6
+          transition: 1s
+
+      &::before
+        content: ""
+        height: rem(78)
+        width: rem(78)
+        position: absolute
+        border-radius: 50%
+        border: 6px solid rgba(255, 255, 255, 0.5)

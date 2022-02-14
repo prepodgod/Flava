@@ -1,0 +1,27 @@
+.feedback
+  display: flex
+  flex-direction: column
+  justify-content: center
+  @media screen and ( min-width: 48rem)
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+  @media screen and ( min-width: 75rem)
+    justify-content: space-between
+  &__
+    &social
+      +secondary-family-regular
+      font-size: var(--font--size-sm)
+      color: var(--text--color-primary)
+      margin: rem(35) 0 rem(5)
+    &link
+      color: var(--text--color-accessory)
+      font-size: var(--font--size-sm)
+      +secondary-family-medium
+      border-bottom: 1px solid transparent
+      text-decoration: none
+      transition: 1s
+      @media screen and ( min-width: 75rem)
+        &:hover
+          transition: 1s
+          border-bottom: 1px solid var(--theme--color-primary)

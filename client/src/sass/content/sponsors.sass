@@ -1,0 +1,23 @@
+
+.sponsors
+  margin-top: percentage(120,411)
+  @media screen and ( min-width: 48rem)
+    margin-top: rem(120)
+  &__
+    &title
+      @media screen and ( min-width: 75rem)
+        font-size: var( --font--size-lg)
+    &wrapper
+      margin-top: rem(30)
+      padding-bottom: rem(20)
+    &picture
+      max-width: rem(168)
+      @media screen and ( min-width: 75rem)
+        cursor: pointer
+    &img
+      display: block
+      width: 100%
+      object-fit: cover
+      @media screen and ( min-width: 75rem)
+        &:hover
+          border-radius: 10%

@@ -1,0 +1,25 @@
+
+.gift
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  &__
+    &title
+      margin-top: rem(40)
+    &desc
+      font-size: var(--font--size-xxsm)
+      color: var(--text--color-primary)
+      +secondary-family-medium
+      max-width: 13.375rem
+
+      margin-top: rem(10)
+      text-align: center
+      @media screen and ( min-width: 36rem)
+        max-width: fit-content
+
+      @media screen and ( min-width: 48rem)
+        font-size: var(--font--size-md)
+      @media screen and ( min-width: 75rem)
+        align-self: flex-start
+        margin-top: rem(44)
