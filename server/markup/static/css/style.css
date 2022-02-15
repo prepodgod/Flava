@@ -907,7 +907,7 @@ body {
 }
 
 .is-active .burger__stick {
-  background-color: var(--theme--color-primary);
+  background-color: #FEBA08;
 }
 
 .is-active .burger__stick:nth-child(2n+1) {
