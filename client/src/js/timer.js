@@ -102,7 +102,7 @@ class Counter {
 }
 
 
-const deadline = '2022.10.10 00:00:00';
+const deadline = '2023.10.10 00:00:00';
 const counterElement = document.getElementById('counter');
 
 const counter = new Counter(counterElement);
